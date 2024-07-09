@@ -13,7 +13,7 @@ const AppContext = ({ children }) => {
 
   const uniqueCategory = [
     'All Categories',
-    ...new Set(productData.map((item) => item.category)),
+    ...new Set(products.map((item) => item.category)),
   ]
   
   const filters = (category) =>{
