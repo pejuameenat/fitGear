@@ -3,7 +3,7 @@
 :root {
   --pryClr: #01204E;
   --TypoClr: #000A19;
-  --productClr: #EAEBEC;
+  --productClr: #f1f3f5;
   --bgClr: #E6F0FF;
   --whiteClr: #FFF;
   --gray: #d1cfcf;
@@ -26,6 +26,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  /* background-color: var(--productClr); */
 }
 
 /* nav */
@@ -204,7 +205,7 @@ nav {
 }
 
 .product {
-  background-color: var(--productClr);
+  background-color: var(--bgClr);
   padding: 1.5rem;
   height: 400px;
   text-align: center;
@@ -613,7 +614,9 @@ strong {
     gap: 2rem;
     flex-basis: 40%;
   }
-
+.navLike-list li{
+  padding-bottom: 0;
+}
   .hero-text-container {
     width: 50%;
     padding: 0;

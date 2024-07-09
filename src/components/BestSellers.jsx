@@ -1,11 +1,14 @@
 import { useGlobalContext } from '../context'
 import ProductTemplate from './ProductTemplate'
 import { FaCircle, FaRegCircle } from 'react-icons/fa'
+import { products } from '../data'
 
 const BestSellers = () => {
-  const { productData, filled, setFilled, isFilled, setIsFilled } =
+  const {filled, setFilled, isFilled, setIsFilled } =
     useGlobalContext()
-  const uniqueData = [...new Set(productData)]
+  const uniqueData = products.filter(
+    (item, i, arr) => i === arr.findIndex((newItem) => newItem.category === item.category)
+  )
   console.log(uniqueData)
   return (
     <section id="best-sellers">
