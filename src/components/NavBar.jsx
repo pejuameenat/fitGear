@@ -22,7 +22,6 @@ const NavBar = () => {
             />
           </div>
         </form>
-
         <h2>
           <NavLink to="/" className="logo-text">
             FitGear Hub

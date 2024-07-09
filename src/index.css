@@ -26,7 +26,6 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* background-color: var(--productClr); */
 }
 
 /* nav */
@@ -56,9 +55,11 @@ nav {
   padding: .3rem 2rem;
   gap: 4px;
   border: 1px solid var(--TypoClr);
-  opacity: 0px;
+  outline: 0;
 }
-
+.form-field:focus{
+  outline: 1px solid var(--pryClr);
+}
 .search {
   position: absolute;
   top: .7rem;
@@ -153,7 +154,8 @@ nav {
   height: 3.25rem;
 }
 
-.btn-hero:hover {
+
+.btn-hero:hover, #link-borderLess:hover {
   opacity: .5;
 }
 
@@ -182,7 +184,7 @@ nav {
   text-align: center;
   padding: 1rem 0;
 }
-
+ 
 .btn-container,
 .product-container {
   display: grid;
@@ -247,7 +249,6 @@ nav {
 
 .cart-btn {
   width: 12.5rem;
-  padding: 12px 32px;
   border: 4px solid var(--pryClr);
   background-color: transparent;
   font-weight: 600;
@@ -255,7 +256,19 @@ nav {
   letter-spacing: var(--letterSpacing);
   transition: var(--transition);
 }
-
+  /* border: 2px solid red; */
+.link, #link-borderLess {
+  color: var(--pryClr);
+  transition: var(--transition);
+  padding: 12px 32px;
+  display: block;
+  width: 100%;
+}
+.link:hover {
+  color: var(--whiteClr);
+  background-color: var(--pryClr);
+  width: 100%;
+}
 .cart-btn:hover,
 #confirmOrder:hover,
 footer {
@@ -303,7 +316,7 @@ footer h4 {
   width: 75%;
   margin: 0 auto;
   color: var(--pryClr);
-
+padding-top: 5rem;
 }
 
 .order article,
@@ -382,7 +395,7 @@ strong {
 .btn {
   width: 100%;
   text-align: left;
-  padding: .4rem 0;
+  border: 2px solid red;
   margin-bottom: .8rem;
   background-color: transparent;
 }
@@ -394,9 +407,6 @@ strong {
   text-align: center;
 }
 
-.btn a {
-  color: var(--pryClr);
-}
 
 /* CHECKOUT PAGE */
 .title-checkout {
@@ -473,10 +483,14 @@ strong {
   width: 100%;
   background-color: transparent;
   border: 3px solid var(--pryClr);
-  padding: .4rem 0;
   transition: var(--transition);
   font-size: .8rem;
+  font-weight: 700;
   text-transform: uppercase;
+}
+#confirmOrder:hover{
+  color: var(--whiteClr);
+  background-color: var(--pryClr);
 }
 
 /* ORDER SUMMARY PAGE */
@@ -488,6 +502,10 @@ strong {
   text-transform: uppercase;
   padding: 1rem 0;
   background-color: transparent;
+  transition: var(--transition);
+}
+.transfer:hover{
+  font-weight: 700;
 }
 
 .paymentWrapper h5 {
@@ -537,18 +555,19 @@ strong {
   border: 2px solid var(--pryClr);
   width: 100%;
   padding: .2rem 0;
-  display: block;
   color: var(--pryClr);
   font-size: .9rem;
   font-weight: 700;
 }
 
-#contactText,
 #contactLink {
-  display: inline;
-  text-align: center;
   border: 0;
+  text-decoration: underline;
+}
+.policyFlex{
+  display: flex;
   font-weight: 500;
+  justify-content: center;
 }
 
 #back-home {
@@ -556,6 +575,9 @@ strong {
   text-align: center;
   color: var(--pryClr);
   font-size: .8rem;
+}
+#link-borderLess{
+  border: 0;
 }
 
 /* MODAL PAGE*/

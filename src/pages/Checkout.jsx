@@ -1,6 +1,7 @@
 import { FaChevronRight } from 'react-icons/fa'
 import { FaCircleCheck } from 'react-icons/fa6'
 import img from '../assets/yogaMat-removebg-preview.png'
+import { Link } from 'react-router-dom'
 const Checkout = () => {
   return (
     <section>
@@ -68,7 +69,9 @@ const Checkout = () => {
             <h4 className="priceTotal delivery">10,000</h4>
           </div>
           <button type="button" id="confirmOrder">
-            confirm order
+            <Link to="/OrderSummary" className="link">
+              confirm order
+            </Link>
           </button>
         </article>
       </div>

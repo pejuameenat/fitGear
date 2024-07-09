@@ -1,4 +1,5 @@
 import img1 from '../assets/yogaMat-removebg-preview.png'
+import { Link } from 'react-router-dom'
 import { AiOutlineMinusCircle } from 'react-icons/ai'
 import { CiCirclePlus } from 'react-icons/ci'
 import { FaChevronLeft } from 'react-icons/fa6'
@@ -45,11 +46,15 @@ const Order = () => {
             <p>10,000</p>
           </div>
           <button type="button" className="btn checkout-btn">
-            <a href="">Checkout #10,000</a>
+            <Link to="/Checkout" className="link">
+              Checkout #10,000
+            </Link>
           </button>
           <button type="button" className="btn">
+            <Link to="/" className="link">
             <FaChevronLeft className="chevronRight" />
-            <a href="#">Go back and continue shopping</a>
+              Go back and continue shopping
+            </Link>
           </button>
         </article>
       </div>

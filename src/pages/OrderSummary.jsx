@@ -1,4 +1,5 @@
-import { FaChevronRight } from "react-icons/fa"
+import { FaChevronRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 const OrderSummary = () => {
   return (
     <section>
@@ -25,8 +26,10 @@ const OrderSummary = () => {
       </div>
       <article className="policy">
         <div className="">
-          <button type="button">
-            <a href="">PAY NOW</a>
+          <button type="button" className="policy-button">
+            <Link to="/SuccessModal" className="link">
+              PAY NOW
+            </Link>
           </button>
           <p>
             By tapping ‘’PAY NOW’’ I accept the Payment Terms and Conditions,
@@ -38,6 +41,7 @@ const OrderSummary = () => {
             NOTE: we will never ask you for your password, CVV or full card
             details over the phone or is email.
           </p>
+          <div className='policyFlex'>
           <p id="contactText">
             Need Help?
             <a href="" id="contactLink">
@@ -45,8 +49,11 @@ const OrderSummary = () => {
               Contact Us
             </a>
           </p>
+          </div>
           <button type="button" id="back-home">
-            BACK TO HOME
+            <Link to="/" id="link-borderLess">
+              BACK TO HOME
+            </Link>
           </button>
         </div>
       </article>
