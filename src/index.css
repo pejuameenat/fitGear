@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat,Inter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --pryClr: #01204E;
@@ -68,21 +68,25 @@ nav {
 
 .logo-text {
   font-size: 1rem;
+  color: var(--pryClr);
 }
 
 .navLike-listContainer {
   background-color: var(--bgClr);
-  padding: 1rem ;
+  padding: 1rem;
 }
+
 .navLike-list button,
 .login-button-wrapper button {
   background-color: transparent;
   border: 0;
 }
+
 .login-button-wrapper {
   display: flex;
   align-items: center;
 }
+
 .navLike-list li {
   display: flex;
   gap: .3rem;
@@ -90,22 +94,26 @@ nav {
   padding-bottom: .4rem;
   cursor: pointer;
 }
-.login-button-wrapper a{
+
+.login-button-wrapper a {
   font-size: 1rem;
   text-transform: capitalize;
   color: var(--TypoClr);
 }
+
 .cart {
   position: relative;
 }
 
 .cart span {
   position: absolute;
-  left: 5px;
-  font-size: .4rem;
+  left: 8px;
+  bottom: 7px;
+  font-size: .5rem;
   color: var(--whiteClr);
   background-color: red;
-  padding: 2px;
+  padding: 2px 3px;
+  border-radius: 50px;
 }
 
 .hidden {
@@ -192,6 +200,7 @@ nav {
 
 .btn-container button {
   border: 0;
+  font-family: 'Montserrat', sans-serif;
   background-color: transparent;
   font-weight: 600;
   text-transform: capitalize;
@@ -589,6 +598,7 @@ strong {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    padding: .5rem 2rem;
   }
 
   .menu {
@@ -614,9 +624,11 @@ strong {
     gap: 2rem;
     flex-basis: 40%;
   }
-.navLike-list li{
-  padding-bottom: 0;
-}
+
+  .navLike-list li {
+    padding-bottom: 0;
+  }
+
   .hero-text-container {
     width: 50%;
     padding: 0;
@@ -631,7 +643,7 @@ strong {
     display: flex;
     align-items: center;
   }
-   
+
   /* PRODUCTS */
 
 }

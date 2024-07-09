@@ -5,6 +5,7 @@ import { IoCartOutline } from 'react-icons/io5'
 import { RiArrowDropDownLine } from "react-icons/ri"
 import { FaBars } from 'react-icons/fa'
 import { useGlobalContext } from '../context'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   const{menu, setMenu} = useGlobalContext()
@@ -21,8 +22,11 @@ const NavBar = () => {
             />
           </div>
         </form>
-        <h2 className="logo-text">
-          FitGear Hub<a href="#"></a>
+
+        <h2>
+          <NavLink to="/" className="logo-text">
+            FitGear Hub
+          </NavLink>
         </h2>
         <FaBars className="menu" onClick={() => setMenu((prev) => !prev)} />
       </div>
