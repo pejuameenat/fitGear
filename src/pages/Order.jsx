@@ -1,15 +1,23 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineMinusCircle } from 'react-icons/ai'
 import { CiCirclePlus } from 'react-icons/ci'
 import { FaChevronLeft } from 'react-icons/fa6'
-const Order = ({ img, productName, price, amount }) => {
-  console.log(img, productName, price, amount)
+
+const Order = ({ img, productName, price }) => {
+  const [count, setCount] = useState(1)
+  const increaseAmount = () => setCount((prevCount) => prevCount + 1)
+
+  const decreaseAmount = () => {
+    if (count === 1) return
+    setCount((prevCount) => prevCount - 1)
+  }
   return (
     <section id="order">
       <div className="order">
         <article className="">
           <h4>
-            Cart <span>({amount})</span>
+            Cart <span>({count})</span>
           </h4>
           <div className="cartFlex">
             <div className="cartImage">
@@ -24,11 +32,11 @@ const Order = ({ img, productName, price, amount }) => {
             <div className="">
               <h5 className="price"># {price}</h5>
               <div className="amount-wrapper">
-                <button type="button">
+                <button type="button" onClick={decreaseAmount}>
                   <AiOutlineMinusCircle className="amount-btns" />
                 </button>
-                <span>1</span>
-                <button type="button">
+                <span>{count}</span>
+                <button type="button" onClick={increaseAmount}>
                   <CiCirclePlus className="amount-btns" />
                 </button>
               </div>
@@ -43,11 +51,11 @@ const Order = ({ img, productName, price, amount }) => {
               <strong>Subtotal </strong>
               <span>Delivery fee is not added yet</span>
             </div>
-            <p>10,000</p>
+            <p>{price * count}</p>
           </div>
           <button type="button" className="btn checkout-btn">
             <Link to="/Checkout" className="link">
-              Checkout #{price}
+              Checkout #{price * count}
             </Link>
           </button>
           <button type="button" className="btn">

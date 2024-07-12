@@ -5,27 +5,25 @@ export const useGlobalContext = () => useContext(GlobalContext)
 
 const AppContext = ({ children }) => {
   const [productData, setProductData] = useState(products)
-  const[filled, setFilled] = useState(true)
+  const [filled, setFilled] = useState(true)
   const [isFilled, setIsFilled] = useState(false)
   const [menu, setMenu] = useState(false)
-
-  
 
   const uniqueCategory = [
     'All Categories',
     ...new Set(products.map((item) => item.category)),
   ]
-  
-  const filters = (category) =>{
-    if(category === 'All Categories'){
+
+  const filters = (category) => {
+    if (category === 'All Categories') {
       setProductData(products)
       return
     }
 
-   const prevProduct =  products.filter(item =>item.category===category)
-   setProductData(prevProduct)
+    const prevProduct = products.filter((item) => item.category === category)
+    setProductData(prevProduct)
   }
-  
+
   return (
     <GlobalContext.Provider
       value={{
