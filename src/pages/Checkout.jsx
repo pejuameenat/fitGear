@@ -1,8 +1,7 @@
 import { FaChevronRight } from 'react-icons/fa'
 import { FaCircleCheck } from 'react-icons/fa6'
-import img from '../assets/yogaMat-removebg-preview.png'
 import { Link } from 'react-router-dom'
-const Checkout = () => {
+const Checkout = ({ price, amount, img, productName }) => {
   return (
     <section>
       <div className="checkout-container">
@@ -58,15 +57,15 @@ const Checkout = () => {
             <p className="total">
               items total <span>(1)</span>
             </p>
-            <h4 className="deliveryPrice">#10, 000</h4>
+            <h4 className="deliveryPrice">#{price}</h4>
             <div className="product-details">
               <img src={img} alt="" className="deliveryImg" />
-              <h5>Yoga Mat</h5>
+              <h5>{productName}</h5>
             </div>
             <p className="deliveryFee">Delivery fees</p>
             <h4 className="delivery">#600</h4>
             <p className="totalText deliveryFee">Total</p>
-            <h4 className="priceTotal delivery">10,000</h4>
+            <h4 className="priceTotal delivery">{`${price}` * `${amount}`}</h4>
           </div>
           <button type="button" id="confirmOrder">
             <Link to="/OrderSummary" className="link">

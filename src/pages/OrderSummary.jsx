@@ -1,6 +1,6 @@
 import { FaChevronRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-const OrderSummary = () => {
+const OrderSummary = ({price}) => {
   return (
     <section>
       <div className="order">
@@ -13,7 +13,7 @@ const OrderSummary = () => {
           </div>
           <div className="payment">
             <p>Total to Pay</p>
-            <strong># 10,000</strong>
+            <strong># {price}</strong>
           </div>
         </article>
         <article className="paymentWrapper">

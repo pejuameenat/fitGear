@@ -3,13 +3,13 @@
 :root {
   --pryClr: #01204E;
   --TypoClr: #000A19;
-  --productClr: #f1f3f5;
+  --productClr: #f5f9fd;
+  --checkoutClr: #ecf0f4;
   --bgClr: #E6F0FF;
   --whiteClr: #FFF;
   --gray: #d1cfcf;
   --transition: 400ms ease-in;
   --letterSpacing: 1px;
-
 }
 
 * {
@@ -26,6 +26,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: var(--productClr);
 }
 
 /* nav */
@@ -57,9 +58,11 @@ nav {
   border: 1px solid var(--TypoClr);
   outline: 0;
 }
-.form-field:focus{
+
+.form-field:focus {
   outline: 1px solid var(--pryClr);
 }
+
 .search {
   position: absolute;
   top: .7rem;
@@ -121,7 +124,7 @@ nav {
   display: none;
 }
 
-/* hero */
+/* HERO */
 #hero {
   background-image: url('./assets/fitGearHero.jpg');
   height: 100vh;
@@ -155,7 +158,8 @@ nav {
 }
 
 
-.btn-hero:hover, #link-borderLess:hover {
+.btn-hero:hover,
+#link-borderLess:hover {
   opacity: .5;
 }
 
@@ -184,7 +188,7 @@ nav {
   text-align: center;
   padding: 1rem 0;
 }
- 
+
 .btn-container,
 .product-container {
   display: grid;
@@ -256,19 +260,22 @@ nav {
   letter-spacing: var(--letterSpacing);
   transition: var(--transition);
 }
-  /* border: 2px solid red; */
-.link, #link-borderLess {
+
+.link,
+#link-borderLess {
   color: var(--pryClr);
   transition: var(--transition);
   padding: 12px 32px;
   display: block;
   width: 100%;
 }
+
 .link:hover {
   color: var(--whiteClr);
   background-color: var(--pryClr);
   width: 100%;
 }
+
 .cart-btn:hover,
 #confirmOrder:hover,
 footer {
@@ -316,12 +323,12 @@ footer h4 {
   width: 75%;
   margin: 0 auto;
   color: var(--pryClr);
-padding-top: 5rem;
+  padding-top: 5rem;
 }
 
 .order article,
 .checkout-details {
-  background-color: var(--productClr);
+  background-color: var(--checkoutClr);
   padding: .8rem;
   margin: 1rem 0;
 }
@@ -395,8 +402,6 @@ strong {
 .btn {
   width: 100%;
   text-align: left;
-  border: 2px solid red;
-  margin-bottom: .8rem;
   background-color: transparent;
 }
 
@@ -488,7 +493,8 @@ strong {
   font-weight: 700;
   text-transform: uppercase;
 }
-#confirmOrder:hover{
+
+#confirmOrder:hover {
   color: var(--whiteClr);
   background-color: var(--pryClr);
 }
@@ -504,7 +510,8 @@ strong {
   background-color: transparent;
   transition: var(--transition);
 }
-.transfer:hover{
+
+.transfer:hover {
   font-weight: 700;
 }
 
@@ -564,7 +571,8 @@ strong {
   border: 0;
   text-decoration: underline;
 }
-.policyFlex{
+
+.policyFlex {
   display: flex;
   font-weight: 500;
   justify-content: center;
@@ -576,7 +584,8 @@ strong {
   color: var(--pryClr);
   font-size: .8rem;
 }
-#link-borderLess{
+
+#link-borderLess {
   border: 0;
 }
 
@@ -665,7 +674,5 @@ strong {
     display: flex;
     align-items: center;
   }
-
-  /* PRODUCTS */
 
 }

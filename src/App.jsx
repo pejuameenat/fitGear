@@ -7,27 +7,27 @@ import {
   Checkout,
   SuccessModal,
 } from './pages'
-
-
+import { products } from './data';
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
     children: [
-    { 
-      index: true,
-      element: <Landing />},
+      {
+        index: true,
+        element: <Landing />,
+      },
       {
         path: 'Order',
-        element: <Order />,
+        element: <Order {...products[0]}/>,
       },
       {
         path: 'OrderSummary',
-        element: <OrderSummary />,
+        element: <OrderSummary {...products[0]}/>,
       },
       {
         path: 'Checkout',
-        element: <Checkout />,
+        element: <Checkout {...products[0]} />,
       },
       {
         path: 'SuccessModal',
@@ -38,6 +38,7 @@ const router = createBrowserRouter([
 ])
  
 const App = () => {
+ 
   return (
     <>
     <RouterProvider router={router}/>

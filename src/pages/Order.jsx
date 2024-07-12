@@ -1,28 +1,28 @@
-import img1 from '../assets/yogaMat-removebg-preview.png'
 import { Link } from 'react-router-dom'
 import { AiOutlineMinusCircle } from 'react-icons/ai'
 import { CiCirclePlus } from 'react-icons/ci'
 import { FaChevronLeft } from 'react-icons/fa6'
-const Order = () => {
+const Order = ({ img, productName, price, amount }) => {
+  console.log(img, productName, price, amount)
   return (
-    <section id="">
+    <section id="order">
       <div className="order">
         <article className="">
           <h4>
-            Cart <span>(1)</span>
+            Cart <span>({amount})</span>
           </h4>
           <div className="cartFlex">
             <div className="cartImage">
-              <img src={img1} alt="" />
+              <img src={img} alt={productName} />
               <div className="cartText">
-                <h5>Yoga Mat</h5>
+                <h5>{productName}</h5>
                 <button type="button" className="remove">
                   remove item
                 </button>
               </div>
             </div>
             <div className="">
-              <h5 className="price"># 10,000</h5>
+              <h5 className="price"># {price}</h5>
               <div className="amount-wrapper">
                 <button type="button">
                   <AiOutlineMinusCircle className="amount-btns" />
@@ -47,12 +47,12 @@ const Order = () => {
           </div>
           <button type="button" className="btn checkout-btn">
             <Link to="/Checkout" className="link">
-              Checkout #10,000
+              Checkout #{price}
             </Link>
           </button>
           <button type="button" className="btn">
             <Link to="/" className="link">
-            <FaChevronLeft className="chevronRight" />
+              <FaChevronLeft className="chevronRight" />
               Go back and continue shopping
             </Link>
           </button>

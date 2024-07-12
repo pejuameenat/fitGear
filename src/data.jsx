@@ -8,6 +8,7 @@ export const products = [
   {
     id: 1,
     img: img3,
+    amount: 1,
     productName: 'Dumbbell',
     category: 'strength training',
     price: 1000,
@@ -15,6 +16,7 @@ export const products = [
   {
     id: 2,
     img: img2,
+    amount: 1,
     productName: 'Yoga Mat',
     category: 'fitness apparel',
     price: 1500,
@@ -22,8 +24,9 @@ export const products = [
 
   {
     id: 3,
-    img: img1,
+    amount: 1,
     productName: 'Gps Watch',
+    img: img1,
     category: ' Cardio equipment',
     price: 1000,
   },
@@ -31,6 +34,7 @@ export const products = [
   {
     id: 4,
     img: img3,
+    amount: 1,
     productName: 'Dumbbell ',
     category: 'strength training',
     price: 1500,
@@ -38,6 +42,7 @@ export const products = [
 
   {
     id: 5,
+    amount: 1,
     img: img2,
     productName: 'Yoga Mat',
     category: 'fitness apparel',
@@ -47,6 +52,7 @@ export const products = [
   {
     id: 6,
     img: img4,
+    amount: 1,
     productName: 'Women’s Gym Bag',
     category: ' Cardio equipment',
     price: 1000,
@@ -55,6 +61,7 @@ export const products = [
   {
     id: 7,
     img: img2,
+    amount: 1,
     productName: 'Yoga Mat',
     category: 'fitness apparel',
     price: 1500,
@@ -63,6 +70,7 @@ export const products = [
   {
     id: 8,
     img: img3,
+    amount: 1,
     productName: 'Dumbbell',
     category: 'strength training',
     price: 1500,
@@ -71,6 +79,7 @@ export const products = [
   {
     id: 9,
     img: img4,
+    amount: 1,
     productName: 'Women’s Gym Bag',
     category: ' Cardio equipment',
     price: 770,
@@ -78,6 +87,7 @@ export const products = [
   {
     id: 10,
     img: img1,
+    amount: 1,
     productName: 'Gps Watch',
     category: ' Cardio equipment',
     price: 800,
@@ -85,14 +95,16 @@ export const products = [
   {
     id: 11,
     img: img3,
+    amount: 1,
     productName: 'Dumbbell',
     category: 'strength training',
     price: 900,
   },
   {
     id: 12,
-    img: img2,
+    amount: 1,
     productName: 'Yoga Mat',
+    img: img2,
     category: 'fitness apparel',
     price: 2500,
   },
