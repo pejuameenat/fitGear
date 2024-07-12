@@ -3,15 +3,10 @@ import { Link } from 'react-router-dom'
 import { AiOutlineMinusCircle } from 'react-icons/ai'
 import { CiCirclePlus } from 'react-icons/ci'
 import { FaChevronLeft } from 'react-icons/fa6'
+import { useGlobalContext } from '../context'
 
 const Order = ({ img, productName, price }) => {
-  const [count, setCount] = useState(1)
-  const increaseAmount = () => setCount((prevCount) => prevCount + 1)
-
-  const decreaseAmount = () => {
-    if (count === 1) return
-    setCount((prevCount) => prevCount - 1)
-  }
+   const{count,increaseAmount,decreaseAmount}=useGlobalContext()
   return (
     <section id="order">
       <div className="order">
@@ -24,7 +19,7 @@ const Order = ({ img, productName, price }) => {
               <img src={img} alt={productName} />
               <div className="cartText">
                 <h5>{productName}</h5>
-                <button type="button" className="remove">
+                <button type="button" className="remove" >
                   remove item
                 </button>
               </div>

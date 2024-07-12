@@ -1,7 +1,9 @@
 import { FaChevronRight } from 'react-icons/fa'
 import { FaCircleCheck } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../context'
 const Checkout = ({ price, amount, img, productName }) => {
+  const { count } = useGlobalContext()
   return (
     <section>
       <div className="checkout-container">
@@ -55,7 +57,7 @@ const Checkout = ({ price, amount, img, productName }) => {
           <h4>Order Summary</h4>
           <div id="grid">
             <p className="total">
-              items total <span>(1)</span>
+              items total <span>({count})</span>
             </p>
             <h4 className="deliveryPrice">#{price}</h4>
             <div className="product-details">
@@ -65,7 +67,7 @@ const Checkout = ({ price, amount, img, productName }) => {
             <p className="deliveryFee">Delivery fees</p>
             <h4 className="delivery">#600</h4>
             <p className="totalText deliveryFee">Total</p>
-            <h4 className="priceTotal delivery">{`${price}` * `${amount}`}</h4>
+            <h4 className="priceTotal delivery">{`${price}` * `${count}`}</h4>
           </div>
           <button type="button" id="confirmOrder">
             <Link to="/OrderSummary" className="link">

@@ -8,7 +8,7 @@ import { useGlobalContext } from '../context'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
-  const{menu, setMenu} = useGlobalContext()
+  const { menu, setMenu, count } = useGlobalContext()
   return (
     <nav>
       <div className="nav-container">
@@ -46,7 +46,7 @@ const NavBar = () => {
           <li className="cart">
             <IoCartOutline />
             Cart
-            <span>0</span>
+            <span>{count}</span>
           </li>
         </ul>
         <div className="login-button-wrapper">

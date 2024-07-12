@@ -8,6 +8,7 @@ const AppContext = ({ children }) => {
   const [filled, setFilled] = useState(true)
   const [isFilled, setIsFilled] = useState(false)
   const [menu, setMenu] = useState(false)
+  const [count, setCount] = useState(1)
 
   const uniqueCategory = [
     'All Categories',
@@ -23,7 +24,15 @@ const AppContext = ({ children }) => {
     const prevProduct = products.filter((item) => item.category === category)
     setProductData(prevProduct)
   }
+  const increaseAmount = () => setCount((prevCount) => prevCount + 1)
 
+  const decreaseAmount = () => {
+    if (count === 1) return
+    setCount((prevCount) => prevCount - 1)
+  }
+  const addToCart = (id) => productData.find((item) => item.id === id)
+
+  // console.log(addToCart(3))
   return (
     <GlobalContext.Provider
       value={{
@@ -36,6 +45,10 @@ const AppContext = ({ children }) => {
         setIsFilled,
         menu,
         setMenu,
+        addToCart,
+        count,
+        increaseAmount,
+        decreaseAmount,
       }}
     >
       {children}

@@ -8,6 +8,7 @@ import {
   SuccessModal,
 } from './pages'
 import { products } from './data';
+import { useGlobalContext } from './context';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
 ])
  
 const App = () => {
- 
+ const{addToCart} = useGlobalContext()
   return (
     <>
     <RouterProvider router={router}/>
