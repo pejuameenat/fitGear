@@ -20,7 +20,6 @@ const AppContext = ({ children }) => {
       setProductData(products)
       return
     }
-
     const prevProduct = products.filter((item) => item.category === category)
     setProductData(prevProduct)
   }

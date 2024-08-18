@@ -25,22 +25,7 @@ const BestSellers = () => {
            <button type="button">
             <FaCircle onClick={() => setFilled(true)} />
           </button>
-        {/* {isFilled ? (
-        ) : (
-          <button type="button" onClick={() => setIsFilled(true)}>
-            <FaCircle />
-          </button>
-        )}
-        {filled ? (
-          <button type="button" onClick={() => setFilled(false)}>
-            <FaRegCircle />
-          </button>
-        ) : (
-          <button type="button">
-            <FaCircle onClick={() => setFilled(true)} />
-          </button>
-        )} */}
-          </div>
+       </div>
     </section>
   )
 }
