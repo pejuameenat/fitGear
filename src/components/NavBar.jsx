@@ -52,7 +52,7 @@ const NavBar = () => {
         <div className="login-button-wrapper">
           <CgProfile />
           <button type="button">
-            <a href="">log in</a>
+            <a href="#">log in</a>
           </button>
         </div>
       </div>

@@ -85,7 +85,7 @@ nav {
   background-color: transparent;
   border: 0;
 }
-
+ 
 .login-button-wrapper {
   display: flex;
   align-items: center;
@@ -97,6 +97,10 @@ nav {
   align-items: center;
   padding-bottom: .4rem;
   cursor: pointer;
+  transition: 400ms ease-in;
+}
+.navLike-list li:hover, .login-button-wrapper a:hover {
+  font-weight: 700;
 }
 
 .login-button-wrapper a {
